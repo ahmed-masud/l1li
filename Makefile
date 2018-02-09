@@ -5,7 +5,7 @@ BIN = l1lI
 
 .PHONY: clean uninstall
 
-$(BIN):
+$(BIN): $(SRC)
 		$(CC) $(SRC) $(CFLAGS) -o $@
 
 install: $(BIN)

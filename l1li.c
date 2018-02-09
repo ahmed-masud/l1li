@@ -101,7 +101,7 @@ int compile_l1lI(FILE* fp) {
     return SUCCESS;
 }
 
-int execute_bf() {
+int execute_l1lI() {
     unsigned short data[DATA_SIZE], pc = 0;
     unsigned int ptr = DATA_SIZE;
     while (--ptr) { data[ptr] = 0; }
@@ -133,7 +133,7 @@ int main(int argc, const char * argv[])
     status = compile_l1lI(fp);
     fclose(fp);
     if (status == SUCCESS) {
-        status = execute_bf();
+        status = execute_l1lI();
     }
     if (status == FAILURE) {
         fprintf(stderr, "Error!\n");
