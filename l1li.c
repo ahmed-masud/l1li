@@ -63,7 +63,7 @@ static struct instruction_t PROGRAM[PROGRAM_SIZE];
 static unsigned short STACK[STACK_SIZE];
 static unsigned int SP = 0;
 
-int compile_bf(FILE* fp) {
+int compile_l1lI(FILE* fp) {
     unsigned short pc = 0, jmp_pc;
     int c;
     while ((c = getc(fp)) != EOF && pc < PROGRAM_SIZE) {
@@ -130,7 +130,7 @@ int main(int argc, const char * argv[])
         fprintf(stderr, "Usage: %s filename\n", argv[0]);
         return FAILURE;
     }
-    status = compile_bf(fp);
+    status = compile_l1lI(fp);
     fclose(fp);
     if (status == SUCCESS) {
         status = execute_bf();
