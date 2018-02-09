@@ -72,16 +72,16 @@ int compile_bf(FILE* fp) {
             case 'l': PROGRAM[pc].operator = OP_DEC_DP; break;
             case '1': PROGRAM[pc].operator = OP_INC_VAL; break;
             case '|': PROGRAM[pc].operator = OP_DEC_VAL; break;
-            case '\\': PROGRAM[pc].operator = OP_OUT; break;
-            case '/': PROGRAM[pc].operator = OP_IN; break;
-            case '!':
+            case '!': PROGRAM[pc].operator = OP_OUT; break;
+            case 'i': PROGRAM[pc].operator = OP_IN; break;
+            case ']':
                 PROGRAM[pc].operator = OP_JMP_FWD;
                 if (STACK_FULL()) {
                     return FAILURE;
                 }
                 STACK_PUSH(pc);
                 break;
-            case 'i':
+            case '[':
                 if (STACK_EMPTY()) {
                     return FAILURE;
                 }
