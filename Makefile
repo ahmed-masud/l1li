@@ -1,5 +1,5 @@
 PREFIX ?= /usr/local
-SRC = brainfuck.c
+SRC = l1li.c
 CFLAGS = -std=c99 -Wall -pedantic
 BIN = l1lI 
 
