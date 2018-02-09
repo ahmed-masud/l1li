@@ -1,5 +1,5 @@
 /*
- L1LI inspired by twitter.com/0xbad1dea
+ L1LI inspired by twitter.com/0xabad1dea
 
  Blatently stolen from Brainfuck-C
  Copyright (C) 2018 Ahmed Masud
